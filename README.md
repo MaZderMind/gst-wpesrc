@@ -11,7 +11,6 @@ sudo apt install -y build-essential autoconf pkg-config libtool gstreamer1.0-too
 mkdir $HOME/wpe
 mkdir $HOME/wpe/installed
 cd $HOME/wpe
-
 ```
 
 ```
@@ -22,6 +21,7 @@ cd libwpe-1.1.0
 cmake -DCMAKE_INSTALL_PREFIX=$HOME/wpe/installed/ -DCMAKE_BUILD_TYPE=RelWithDebInfo -GNinja
 ninja
 ninja install
+```
 
 ```
 cd $HOME/wpe
