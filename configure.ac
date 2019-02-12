@@ -2,13 +2,13 @@ dnl required version of autoconf
 AC_PREREQ([2.53])
 
 dnl package name and package version
-AC_INIT([webkitembedded],[1.0.0])
+AC_INIT([gst-wpe],[1.0.0])
 
 dnl required versions of gstreamer and plugins-base
 GST_REQUIRED=1.0.0
 GSTPB_REQUIRED=1.0.0
 
-AC_CONFIG_SRCDIR([src/webkitembedded-plugin.c])
+AC_CONFIG_SRCDIR([src])
 AC_CONFIG_HEADERS([config.h])
 
 dnl required version of automake
@@ -18,7 +18,7 @@ dnl enable mainainer mode by default
 AM_MAINTAINER_MODE([enable])
 
 dnl check for tools (compiler etc.)
-AC_PROG_CC
+AC_PROG_CXX
 
 dnl required version of libtool
 LT_PREREQ([2.2.6])
@@ -46,7 +46,8 @@ PKG_CHECK_MODULES(GST, [
   gstreamer-1.0 >= $GST_REQUIRED
   gstreamer-base-1.0 >= $GST_REQUIRED
   gstreamer-controller-1.0 >= $GST_REQUIRED
-  gstreamer-audio-1.0 >= $GST_REQUIRED
+  gstreamer-video-1.0 >= $GST_REQUIRED
+  gstreamer-gl-1.0 >= $GST_REQUIRED
 ], [
   AC_SUBST(GST_CFLAGS)
   AC_SUBST(GST_LIBS)
@@ -58,6 +59,23 @@ PKG_CHECK_MODULES(GST, [
       on RPM-based systems gstreamer1.0-devel, libgstreamer1.0-devel
       or similar. The minimum version required is $GST_REQUIRED.
   ])
+])
+
+PKG_CHECK_MODULES(SOUP, [
+  libsoup-2.4 >= 2.62.0
+], [
+  AC_SUBST(SOUP_CFLAGS)
+  AC_SUBST(SOUP_LIBS)
+])
+
+PKG_CHECK_MODULES(WPE, [
+  wpe-webkit-0.1 >= 2.22
+  wpebackend-fdo-0.1
+  egl
+  xkbcommon
+], [
+  AC_SUBST(WPE_CFLAGS)
+  AC_SUBST(WPE_LIBS)
 ])
 
 dnl check if compiler understands -Wall (if yes, add -Wall to GST_CFLAGS)
