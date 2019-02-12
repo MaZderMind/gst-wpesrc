@@ -5,6 +5,8 @@ The wpesrc element is used to produce a video texture representing a web page re
 
 Install Build-Dependencies
 --------------------------
+Tested for Ubuntu 18.04 LTS
+
 ```
 sudo apt install -y build-essential autoconf pkg-config libtool gstreamer1.0-tools libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-gl1.0-0
 
