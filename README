@@ -1,0 +1,29 @@
+Webkit Embedded
+===============
+URL: https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad/tree/master/ext/wpe
+he wpesrc element is used to produce a video texture representing a web page rendered off-screen by WPE.
+
+Boilerplate generated with https://gstreamer.mazdermind.de/
+
+Foo
+---
+A phase-meter shows the amount of phase difference in a pair of correlated signals. It allows the sound technician to adjust for optimal stereo and to diagnose mistakes such as an inverted signal. Furthermore it provides an indication of mono-compatibility, and possible phase-cancellation that takes place when a stereo-signal is mixed down to mono.
+
+Install Build-Dependencies
+--------------------------
+```
+apt install -y build-essential autoconf pkg-config libtool gstreamer1.0-tools libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+```
+
+Getting-Started
+---------------
+```
+cd webkitembedded
+git init
+git submodules init
+./autogen.sh
+
+cd examples
+./inspect.sh
+./run.sh
+```

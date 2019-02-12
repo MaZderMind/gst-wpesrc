@@ -1,0 +1,19 @@
+{
+  "author": "Philippe Normand",
+  "authorEmail": "philn",
+  "description": "he wpesrc element is used to produce a video texture representing a web page rendered off-screen by WPE.",
+  "elements": [
+    {
+      "archetype": "GstBaseTransform",
+      "classifications": [],
+      "description": "A phase-meter shows the amount of phase difference in a pair of correlated signals. It allows the sound technician to adjust for optimal stereo and to diagnose mistakes such as an inverted signal. Furthermore it provides an indication of mono-compatibility, and possible phase-cancellation that takes place when a stereo-signal is mixed down to mono.",
+      "mediatype": "VIDEO",
+      "name": "Foo",
+      "properties": [],
+      "signals": []
+    }
+  ],
+  "license": "LGPL",
+  "name": "Webkit Embedded",
+  "url": "https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad/tree/master/ext/wpe"
+}
