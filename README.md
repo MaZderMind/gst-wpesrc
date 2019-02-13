@@ -43,7 +43,7 @@ tar xavf wpewebkit-2.22.4.tar.xz
 cd wpewebkit-2.22.4
 
 cmake -DCMAKE_INSTALL_PREFIX=$HOME/wpe/installed/ -DLIB_INSTALL_DIR=$HOME/wpe/installed/lib -DLIBEXEC_INSTALL_DIR=$HOME/wpe/installed/libexec -DEXEC_INSTALL_DIR=$HOME/wpe/installed/bin -DPORT=WPE -DUSE_WOFF2=false -DCMAKE_BUILD_TYPE=RelWithDebInfo -GNinja -DWPE_INCLUDE_DIRS="$HOME/wpe/installed/include/wpe-0.2/" -DWPE_LIBRARIES="$HOME/wpe/installed/lib/libwpe-0.2.so"
-ninja # takes a while and requirs quite a bit of RAM (~16GB)
+ninja -j4 # takes a while and requires quite a bit of RAM (~16GB)
 ninja install
 ```
 
