@@ -8,7 +8,7 @@ Install Build-Dependencies
 Tested for Ubuntu 18.04 LTS
 
 ```
-sudo apt install -y build-essential wget cmake gperf python ruby ninja-build autoconf pkg-config libtool libxkbcommon-dev libcairo2-dev libicu-dev libjpeg-dev libepoxy-dev libgcrypt20-dev libsoup2.4-dev libsqlite3-dev libwebp-dev libtasn1-6-dev libxslt1-dev gstreamer1.0-tools libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-gl1.0-0
+sudo apt install -y build-essential git wget cmake gperf python ruby ninja-build autoconf pkg-config libtool libxkbcommon-dev libcairo2-dev libicu-dev libjpeg-dev libepoxy-dev libgcrypt20-dev libsoup2.4-dev libsqlite3-dev libwebp-dev libtasn1-6-dev libxslt1-dev gstreamer1.0-tools libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-gl1.0-0
 
 mkdir $HOME/wpe
 mkdir $HOME/wpe/installed
@@ -59,7 +59,7 @@ make
 Getting-Started
 ---------------
 ```
-LD_LIBRARY_PATH"=$HOME/wpe/installed/lib/" ./test-scripts/inspect-wpesrc.sh
-LD_LIBRARY_PATH"=$HOME/wpe/installed/lib/" ./test-scripts/run-wpesrc.sh
-LD_LIBRARY_PATH"=$HOME/wpe/installed/lib/" ./test-scripts/run-wpesrc-composition.sh
+LD_LIBRARY_PATH="$HOME/wpe/installed/lib/" ./test-scripts/inspect-wpesrc.sh
+LD_LIBRARY_PATH="$HOME/wpe/installed/lib/" ./test-scripts/run-wpesrc.sh
+LD_LIBRARY_PATH="$HOME/wpe/installed/lib/" ./test-scripts/run-wpesrc-composition.sh
 ```
